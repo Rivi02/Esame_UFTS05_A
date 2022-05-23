@@ -25,20 +25,23 @@ public class Operazioni_Arraylist {
     }
 
     String all(){
-        String msg="All our plates: ";
+        String msg = null;
         for (int i = 0; i < arr.size(); i++) {
-            msg=msg+arr.get(i).toString();
+            if (i==1)
+                msg=arr.get(i).toString();
+            else
+                msg=msg+arr.get(i).toString();
         }
         return msg;
     }
 
     String minorPrice(){
         arr.sort((Piatto p1, Piatto p2)->(int) (p1.costo-p2.costo));
-        return "More Expensive "+arr.get(0).toString();
+        return arr.get(0).toString();
     }
 
     String sort(){
         arr.sort((Piatto p1, Piatto p2)->(int) (p2.costo-p1.costo));
-        return "All Sorted by price" + gson.toJson(arr);
+        return gson.toJson(arr);
     }
 }
