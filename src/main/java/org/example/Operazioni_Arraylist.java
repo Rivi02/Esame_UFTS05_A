@@ -35,8 +35,8 @@ public class Operazioni_Arraylist {
         return msg;
     }
 
-    String minorPrice(){
-        arr.sort((Piatto p1, Piatto p2)->(int) (p1.costo-p2.costo));
+    String maxPrice(){
+        arr.sort((Piatto p1, Piatto p2)->(int) (p2.costo-p1.costo));
         return arr.get(0).toString();
     }
 

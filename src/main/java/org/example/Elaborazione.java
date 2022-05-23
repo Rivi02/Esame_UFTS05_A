@@ -58,7 +58,7 @@ public class Elaborazione extends Thread{
                 result=o.all();
                 break;
             case "more_expensive":
-                result=o.minorPrice();
+                result=o.maxPrice();
                 break;
             case "all_sorted":
                 result=o.sort();
