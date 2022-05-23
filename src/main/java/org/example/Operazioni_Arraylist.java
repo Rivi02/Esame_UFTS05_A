@@ -29,11 +29,11 @@ public class Operazioni_Arraylist {
         for (int i = 0; i < arr.size(); i++) {
             msg=msg+arr.get(i).toString();
         }
-        return "All our plates: "+msg;
+        return msg;
     }
 
     String minorPrice(){
-        arr.sort((Piatto p1, Piatto p2)->(int) (p1.costo+p2.costo));
+        arr.sort((Piatto p1, Piatto p2)->(int) (p1.costo-p2.costo));
         return "More Expensive "+arr.get(0).toString();
     }
 
